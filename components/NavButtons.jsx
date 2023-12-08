@@ -2,7 +2,7 @@ import React from "react"
 import Button from "./Button"
 
 export default function NavButtons(props) {
-  const { wordsDataArray, currentWord, setCurrentWord, position } = props.object
+  const { wordsDataArray, currentWord, setCurrentWord, position } = props.data
 
   function changeWord(currentIndex, direction, position) {
     let nextIndex

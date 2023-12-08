@@ -15,7 +15,7 @@ export default function Word(props) {
     antonyms,
     etymology,
     array,
-  } = props.object
+  } = props.data
 
   const definitionElement = definition.map((sense, index, array) => {
     const senseNum = array.length > 1 ? `${index + 1}. ` : ""

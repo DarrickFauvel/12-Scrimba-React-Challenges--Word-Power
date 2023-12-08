@@ -26,41 +26,33 @@ export default function App() {
 	Note: The results won't necessarily be the "best" way of passing the props, and some aspects of how this challenge is set up are a bit contrived. This is just meant as an exercise in reducing the number of props you pass! 
 */
 
+  const navData = {
+    wordsDataArray,
+    currentWord,
+    setCurrentWord,
+  }
+
   return (
     <div className="wrapper">
       <Header />
 
       <NavButtons
-        object={{
-          wordsDataArray,
-          currentWord,
-          setCurrentWord,
+        data={{
+          ...navData,
           position: "top",
         }}
       />
 
       <Word
-        object={{
-          word: currentWord.word,
-          pronunciation: currentWord.pronunciation,
-          definition: currentWord.definition,
-          icon: currentWord.icon,
-          category: currentWord.category,
-          note: currentWord.note,
-          partOfSpeech: currentWord.partOfSpeech,
-          example: currentWord.example,
-          synonyms: currentWord.synonyms,
-          antonyms: currentWord.antonyms,
-          etymology: currentWord.etymology,
+        data={{
+          ...currentWord,
           array: wordsDataArray,
         }}
       />
 
       <NavButtons
-        object={{
-          wordsDataArray,
-          currentWord,
-          setCurrentWord,
+        data={{
+          ...navData,
           position: "bottom",
         }}
       />
